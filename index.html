@@ -457,6 +457,132 @@
         }
 
         /* ============================================================ */
+        /* ATUR CARA PROGRAM                                             */
+        /* ============================================================ */
+        .program-card {
+            padding: clamp(1rem, 3vw, 1.4rem) clamp(1rem, 3vw, 1.6rem);
+            margin-bottom: 1rem;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--gold);
+            border-radius: 1.1rem;
+            position: relative;
+        }
+
+        .program-subhead {
+            text-align: center;
+            font-size: 0.72rem;
+            opacity: 0.55;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+        }
+
+        .program-timeline {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .program-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.32rem;
+            top: 0.4rem;
+            bottom: 0.4rem;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(212,169,0,0.4), rgba(212,169,0,0.06));
+        }
+
+        .program-item {
+            position: relative;
+            padding: 0.45rem 0 0.45rem 0.7rem;
+        }
+
+        .program-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.72rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 169, 0, 0.15);
+        }
+
+        .program-time {
+            display: block;
+            font-weight: 700;
+            font-size: 0.72rem;
+            color: var(--gold-ink);
+            margin-bottom: 0.15rem;
+        }
+
+        .program-text {
+            font-size: 0.78rem;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        .program-closing {
+            background: var(--panel-2);
+            border: 1px solid var(--line);
+            border-radius: 1rem;
+            padding: 0.8rem 1rem;
+        }
+
+        .program-closing-label {
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--gold-ink);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .program-closing-label i {
+            color: var(--gold);
+        }
+
+        .program-closing-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .program-closing-list li {
+            display: flex;
+            gap: 0.5rem;
+            align-items: baseline;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        .program-closing-list li i {
+            color: var(--gold);
+            width: 1rem;
+            font-size: 0.65rem;
+            flex-shrink: 0;
+        }
+
+        .program-closing-list li.highlight {
+            background: rgba(212, 169, 0, 0.09);
+            border: 1px solid rgba(212, 169, 0, 0.25);
+            border-radius: 0.7rem;
+            padding: 0.5rem 0.7rem;
+            font-weight: 700;
+            opacity: 1;
+            color: var(--gold-ink);
+        }
+
+        .program-closing-list li.highlight i {
+            font-size: 0.85rem;
+        }
+
+        /* ============================================================ */
         /* MERCH GRID                                                    */
         /* ============================================================ */
         .merch-grid {
@@ -1769,6 +1895,79 @@
         <div style="margin-top: 0.8rem; text-align: center; opacity: 0.5; font-size: 0.75rem;">
             <i class="fas fa-ticket-alt" style="color: #d4a900;"></i>
             1 helai baju = 1 cabutan · lebih banyak = lebih tinggi peluang!
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ATUR CARA PROGRAM                                             -->
+    <!-- ============================================================ -->
+    <div class="section-heading" style="margin-top: 1.5rem;"><i class="fas fa-calendar-days"></i> Atur Cara Program</div>
+
+    <div class="program-card glass reveal">
+        <div class="section-title">
+            <i class="fas fa-calendar-days"></i> MALAM SEMARAK DAULAT 2026
+        </div>
+        <div class="program-subhead">
+            <i class="fas fa-route" style="color: #d4a900;"></i> Konvoi Diraja · 43 KM
+        </div>
+
+        <div class="program-timeline">
+            <div class="program-item">
+                <span class="program-time">7.00 – 8.00 malam</span>
+                <div class="program-text">Ketibaan &amp; Himpunan Peserta</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.00 malam</span>
+                <div class="program-text">Penyusunan Peserta Mengikut Blok Konvoi</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.15 malam</span>
+                <div class="program-text">Taklimat Akhir Pergerakan &amp; Keselamatan kepada Ketua Blok, Marshal dan Petugas</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.30 malam</span>
+                <div class="program-text">Keberangkatan Tiba YTM Tengku Mahkota Kelantan</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.45 malam</span>
+                <div class="program-text">Keberangkatan Tiba KDYMM Sultan Kelantan</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.50 malam</span>
+                <div class="program-text">Bacaan Doa oleh Imam Besar Masjid Kubang Kerian</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">8.55 malam</span>
+                <div class="program-text">Persiapan Akhir Konvoi &amp; Pengambilan Posisi</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">9.00 malam</span>
+                <div class="program-text">Pelepasan Rasmi Ride With Me 2.0 oleh Timbalan Menteri Besar Kelantan</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">9.00 – 10.00 malam</span>
+                <div class="program-text">Pergerakan Konvoi Diraja Sejauh 43 KM</div>
+            </div>
+            <div class="program-item">
+                <span class="program-time">10.00 malam</span>
+                <div class="program-text">Keberangkatan Tiba YTM Tengku Mahkota Kelantan bersama Konvoi Motosikal</div>
+            </div>
+        </div>
+
+        <div class="program-closing">
+            <div class="program-closing-label"><i class="fas fa-star"></i> Ringkasan Rangkaian Acara &amp; Persembahan</div>
+            <ul class="program-closing-list">
+                <li><i class="fas fa-music"></i> Lagu "Selamat Sultan" &amp; ucapan oleh YAB Ustaz Dato' Panglima Perang Menteri Besar Kelantan</li>
+                <li><i class="fas fa-gift"></i> Persembahan cenderahati YTM Tengku Mahkota Kelantan kepada KDYMM Sultan Muhammad V</li>
+                <li><i class="fas fa-motorcycle"></i> KDYMM Sultan Muhammad V memulas pendikit Harley Davidson bersama para penunggang</li>
+                <li><i class="fas fa-signature"></i> Tandatangan kenangan KDYMM Sultan Muhammad V di tangki motosikal — hadiah Cabutan Bertuah</li>
+                <li><i class="fas fa-motorcycle"></i> Pertunjukan Stunt Motosikal</li>
+                <li><i class="fas fa-microphone"></i> Nyanyian solo &amp; persembahan Artis Terkenal Tanah Air</li>
+                <li><i class="fas fa-gem"></i> Cabutan Bertuah Bonanza</li>
+                <li class="highlight"><i class="fas fa-rocket"></i> Pertunjukan Bunga Api &amp; Persembahan Drone</li>
+                <li><i class="fas fa-flag"></i> Lagu "Selamat Sultan" &amp; istiadat berangkat meninggalkan majlis</li>
+                <li><i class="fas fa-flag-checkered"></i> Majlis Bersurai</li>
+            </ul>
         </div>
     </div>
 
