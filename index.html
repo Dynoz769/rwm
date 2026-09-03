@@ -927,6 +927,27 @@
             border-color: var(--gold);
         }
 
+        .size-chart-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gold-ink);
+            background: rgba(212, 169, 0, 0.08);
+            border: 1px solid rgba(212, 169, 0, 0.2);
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .size-chart-link:hover {
+            background: rgba(212, 169, 0, 0.14);
+            border-color: var(--gold);
+        }
+
         /* ============================================================ */
         /* PRIZE SECTION — POSTER                                        */
         /* ============================================================ */
@@ -1752,6 +1773,11 @@
                     </div>
                 </div>
             </div>
+            <div style="margin: 0.6rem 0; text-align: center;">
+                <a class="size-chart-link" href="#carta-saiz" onclick="document.getElementById('carta-saiz').scrollIntoView({ behavior: 'smooth' }); return false;">
+                    <i class="fas fa-ruler"></i> Lihat Carta Saiz
+                </a>
+            </div>
             <button class="btn-primary" onclick="goToPaymentForm()">
                 <i class="fas fa-cart-plus"></i> BELI SEKARANG
             </button>
@@ -1786,6 +1812,26 @@
             <button class="btn-secondary" onclick="document.getElementById('hadiah').scrollIntoView({ behavior: 'smooth' });">
                 <i class="fas fa-list-ul"></i> Lihat hadiah
             </button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- CARTA SAIZ BAJU                                               -->
+    <!-- ============================================================ -->
+    <div id="carta-saiz">
+        <div class="section-heading"><i class="fas fa-ruler"></i> Carta Saiz Baju</div>
+
+        <div class="terms-card glass reveal">
+            <div class="terms-top-row" style="justify-content: center;">
+                <h4><i class="fas fa-ruler" style="color: #d4a900;"></i> SAIZ CHART BAJU SUBLIMATION — XS hingga 12XL</h4>
+            </div>
+            <div class="merch-photo-wrap" id="sizeChartTrigger" style="padding: 0.5rem;">
+                <img class="merch-photo" src="https://i.postimg.cc/kXbF2F9h/Screenshot-2026-09-03-184713.png" alt="Carta Saiz Baju Ride With Me 2.0" loading="lazy" style="max-height: 560px;">
+            </div>
+            <div style="margin-top: 0.6rem; font-size: 0.68rem; opacity: 0.55; text-align: center; line-height: 1.6;">
+                <i class="fas fa-circle-info" style="color: #d4a900;"></i>
+                Baju unisex · cutting standard · unit ukuran dalam inci · ketik gambar untuk paparan penuh
+            </div>
         </div>
     </div>
 
@@ -1983,19 +2029,19 @@
 
         <div class="accordion-gallery" id="accordionGallery">
             <div class="accordion-item expanded" data-index="0">
-                <img class="item-image" src="https://i.postimg.cc/Jh4bXPxy/Route1.png" alt="Laluan 1" loading="lazy">
+                <img class="item-image" src="https://i.postimg.cc/m2HNPNR7/Screenshot-2026-09-03-184643.png" alt="Laluan Konvoi Ride With Me 2.0" loading="lazy">
                 <div class="item-overlay"></div>
-                <div class="item-badge"><i class="fas fa-flag-checkered"></i> 24 km</div>
+                <div class="item-badge"><i class="fas fa-flag-checkered"></i> 26.1 km</div>
                 <div class="item-label">
-                    Laluan 1
-                    <small>Istana Negeri → Stadium</small>
+                    Laluan Konvoi
+                    <small>Istana Negeri Kubang Kerian</small>
                 </div>
             </div>
         </div>
 
         <div style="margin-top: 0.8rem; opacity: 0.4; font-size: 0.7rem; text-align: center; letter-spacing: 0.5px;">
             <i class="fas fa-map-marker-alt" style="color: #d4a900;"></i>
-            Bermula di hadapan Istana Negeri Kubang Kerian · 24 km
+            Bermula di hadapan Istana Negeri Kubang Kerian · 26.1 km
         </div>
     </div>
 
@@ -2225,6 +2271,14 @@
         if (merchTrigger) {
             merchTrigger.addEventListener('click', () => {
                 const img = merchTrigger.querySelector('img');
+                if (img) openSingleLightbox(img.src, img.alt);
+            });
+        }
+
+        const sizeChartTrigger = document.getElementById('sizeChartTrigger');
+        if (sizeChartTrigger) {
+            sizeChartTrigger.addEventListener('click', () => {
+                const img = sizeChartTrigger.querySelector('img');
                 if (img) openSingleLightbox(img.src, img.alt);
             });
         }
