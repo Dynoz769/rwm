@@ -1198,6 +1198,14 @@
             }
         }
 
+        /* Bila galeri cuma ada satu gambar (cth. laluan konvoi), guna
+           nisbah imej sebenar supaya gambar muat penuh dalam kotak
+           tanpa dipotong (crop) atau jarak kosong (letterbox). */
+        .accordion-gallery:has(.accordion-item:only-child) {
+            height: auto;
+            aspect-ratio: 335 / 272;
+        }
+
         /* ============================================================ */
         /* MEMORY GALLERY                                                */
         /* ============================================================ */
@@ -2077,7 +2085,6 @@
                 <span>Memuatkan borang pembayaran...</span>
             </div>
             <div id="bcl-payment-form" data-url="https://ridewithme.bcl.my/embed/form/ride-with-me-2-0"></div>
-            <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
         </div>
     </div>
 
